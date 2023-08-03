@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+   
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.4.4.min.js"></script> 
+<!--   <script type="text/javascript">
+    $(window).load(function(){
+$(".loader").delay(3000).queue(function() {
+    $(this).remove();
+});
+    });
+
+      </script> 
+  -->
+
+    <title>Solar System by Rehan</title>
+</head>
+<body>
+
+
+        
+
+
+<div id='gameCanvas'>
+  <div class="loader">
+    <h1 class="Heading">Welcome to The Solar System</h1>
+  <div class="spinner-box">
+      <div class="solar-system">
+        <div class="earth-orbit orbit">
+          <div class="planet earth"></div>
+          <div class="venus-orbit orbit">
+            <div class="planet venus"></div>
+            <div class="mercury-orbit orbit">
+              <div class="planet mercury"></div>
+              <div class="sun"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
+
+<div class="center">
+  <div class="btn-1">
+    <a onclick = "redirect();"><span>Explore</span></a>
+  </div>
+
+  <div class="progress" id="progress" style="display:none;">
+  <div class="progress-value"></div>
+</div>
+ 
+
+
+  <script>
+    function redirect () {
+       setTimeout(myURL, 5000);
+ 
+   document.getElementById('progress').style.display="flex";
+
+    }
+
+   function myURL() {
+       document.location.href = 'http://localhost:1234';
+    }
+ </script>
+
+</body>
+</html> 
+
+
+
+
