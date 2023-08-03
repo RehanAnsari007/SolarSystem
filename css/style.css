@@ -1,0 +1,296 @@
+/* KEYFRAMES */
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+  @keyframes spin3D {
+    from {
+      transform: rotate3d(0.5, 0.5, 0.5, 360deg);
+    }
+    to {
+      transform: rotate3d(0deg);
+    }
+  }
+  
+  @keyframes configure-clockwise {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes configure-xclockwise {
+    0% {
+      transform: rotate(45deg);
+    }
+    25% {
+      transform: rotate(-45deg);
+    }
+    50% {
+      transform: rotate(-135deg);
+    }
+    75% {
+      transform: rotate(-225deg);
+    }
+    100% {
+      transform: rotate(-315deg);
+    }
+  }
+  
+  @keyframes pulse {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0.25;
+      transform: scale(0.75);
+    }
+  }
+  
+  /* GRID STYLING */
+  
+  
+  body {
+  
+background-image: url('../img/stars8k.jpg');
+  
+height: 100vh;
+  
+margin: 0;
+  
+width: 100vw;
+  
+display: flex;
+  
+align-items: center;
+  
+align-content: center;
+  
+justify-content: center;
+  
+flex-direction: column;
+  }
+  .Heading{
+    display: flex;
+    color: #ffab91;
+    vertical-align: top;
+    align-content: flex-start;
+  }
+  
+  .loader{
+    width: 300px;
+    /* height: 300px; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    /* position: absolute; */
+    top: 50%;
+    left: 40%;
+    /* transform: translate(0, -50%); */
+    /* padding: 10px; */
+    align-content: center;
+  }
+  .loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+  }
+  .spinner-box {
+    /* width: 300px; */
+    /* height: 300px; */
+    /* justify-content: center; */
+    align-items: center;
+    background-color: transparent;
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 40%; */
+    /* transform: translate(0, -50%); */
+    padding: 10px;
+  }
+  
+  
+  /* SOLAR SYSTEM */
+  
+  .solar-system {
+    /* width: 250px; */
+    /* height: 250px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .orbit {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fafbfc;
+    border-radius: 50%;
+  }
+  
+  .earth-orbit {
+    width: 165px;
+    height: 165px;
+    -webkit-animation: spin 12s linear 0s infinite;
+  }
+  
+  .venus-orbit {
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 7.4s linear 0s infinite;
+  }
+  
+  .mercury-orbit {
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 3s linear 0s infinite;
+  }
+  
+  .planet {
+    position: absolute;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3ff9dc;
+  }
+  
+  .sun {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #ffab91;
+  }
+  #gameCanvas {
+    position: relative;
+  }
+
+
+
+
+.center {
+  display: flex;
+  /* min-height: 12vh; */
+  font-size: 30px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-1 {
+  width: 308px;
+  height: 197px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-1:focus{
+  background-color: #ffab91
+}
+/* Created by http://grohit.com/  */
+.btn-1 a {
+  text-decoration: none;
+  border: 2px solid #ffab91;
+  padding: 15px;
+  color: #3ff9dc;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+span {
+  position: relative;
+  /* z-index coz when we put bg to before and after this span text will not be visible */
+  z-index: 3;
+}
+
+/* Button 1 styles */
+
+.btn-1 a::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  width: calc(100% + 6px);
+  /*100% plus double the times left values*/
+  height: calc(100% - 10px);
+  background-color: #ffab91;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-1 a:hover::before,
+.btn-2 a:hover::before {
+  transform: scaleY(0);
+}
+
+.btn-1 a::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  width: calc(100% - 10px);
+  /*100% plus double the times left values*/
+  height: calc(100% + 10px);
+  background-color: #000000;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+.btn-1 a:hover::after,
+.btn-2 a:hover::after {
+  transform: scaleX(0);
+}
+
+
+
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 5s normal forwards;
+  box-shadow: 0 10px 40px -10px #ffffff;
+  border-radius: 100px;
+  background: #6cc7cc;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+
